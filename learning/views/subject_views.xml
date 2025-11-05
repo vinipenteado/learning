@@ -20,7 +20,17 @@
     </record>
 
     <!-- Lista view -->
-    
+    <record id="subject_view_list" model="ir.ui.view">
+        <field name="name">subject.view.list</field>
+        <field name="model">learning.subject</field>
+        <field name="arch" type="xml">
+            <list string="Subjects">
+                <field name="name" />
+                <field name="price" />
+                <field name="difficulty" />
+            </list>
+        </field>
+    </record>
 
     <!-- Search view -->
     <record id="subject_view_search" model="ir.ui.view">
