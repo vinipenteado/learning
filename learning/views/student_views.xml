@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="student_view_list" model="ir.ui.view">
+        <field name="name">student.view.list</field>
+        <field name="model">learning.student</field>
+        <field name="arch" type="xml">
+            <list string="Students">
+                <field name="name" />
+                <field name="vat" />
+                <field name="age" />
+                <field name="birth_date" optional="show"/>
+            </list>
+        </field>
+    </record>
+
+</odoo>
