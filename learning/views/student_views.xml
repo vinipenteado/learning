@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <record id="student_view_form" model="ir.ui.view">
+        <field name="name">student.view.form</field>
+        <field name="model">learning.student</field>
+        <field name="arch" type="xml">
+            <form string="Student">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="vat" />
+                        <field name="age" />
+                        <field name="birth_date" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Lista view -->
     <record id="student_view_list" model="ir.ui.view">
         <field name="name">student.view.list</field>
         <field name="model">learning.student</field>
