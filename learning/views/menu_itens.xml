@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<menuitem
-    id="student_menu"
-    name="Students"
-    sequence="10"
-    action="student_action"
-    />
+    <menuitem id="menu_edyma_learning_root" name="Edyma Learning" sequence="5"/>
+
+    <menuitem
+        id="student_menu"
+        name="Students"
+        sequence="10"
+        parent="menu_edyma_learning_root"
+        action="student_action"
+        />
     
     <menuitem
         id="subject_menu"
         name="Subject"
         sequence="09"
+        parent="menu_edyma_learning_root"
         action="subject_action"
+        />
+
+    <menuitem
+        id="course_menu"
+        name="Course"
+        sequence="08"
+        parent="menu_edyma_learning_root"
+        action="course_action"
         />
 </odoo>
