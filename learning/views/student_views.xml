@@ -12,6 +12,7 @@
                         <field name="vat" />
                         <field name="age" />
                         <field name="birth_date" />
+                        <field name="partner_id" />
                     </group>
                 </sheet>
             </form>
@@ -28,6 +29,7 @@
                 <field name="vat" />
                 <field name="age" />
                 <field name="birth_date" optional="show"/>
+                <field name="partner_id" />
             </list>
         </field>
     </record>
@@ -40,6 +42,7 @@
                 <field name="name" />
                 <field name="vat" />
                 <field name="age" />
+                <field name="partner_id" />
                 <filter name="adult" string="Adulto" domain="[('age', '&gt;', 18)]"/>
                 <filter name="nino" string="Niño" domain="[('age', '&lt;', 18)]"/>
                 <group string="Group By">

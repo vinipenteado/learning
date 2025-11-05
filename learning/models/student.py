@@ -8,6 +8,7 @@ class Student(models.Model):
     vat = fields.Char(string='VAT', required=True)
     birth_date = fields.Date(string='Date of Birth')
     age = fields.Integer(string='Age', compute='_compute_age', store=True)
+    partner_id = fields.Many2one('res.partner', string='Partner')
 
     @api.depends('birth_date')
     def _compute_age(self):

@@ -18,7 +18,7 @@ Modulo para gestionar alumnos
     'version': '18.0.0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'contacts'],
 
     # always loaded
     'data': [
