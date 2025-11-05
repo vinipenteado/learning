@@ -8,4 +8,10 @@
     action="student_action"
     />
     
+    <menuitem
+        id="subject_menu"
+        name="Subject"
+        sequence="09"
+        action="subject_action"
+        />
 </odoo>

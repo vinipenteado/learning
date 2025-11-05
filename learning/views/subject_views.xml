@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="subject_view_list" model="ir.ui.view">
-        <field name="name">subject.view.list</field>
+    <!--Form view -->
+    <record id="subject_view_form" model="ir.ui.view">
+        <field name="name">subject.view.form</field>
         <field name="model">learning.subject</field>
         <field name="arch" type="xml">
             <form string="Subject">
@@ -11,9 +12,39 @@
                         <field name="name" />
                         <field name="price" />
                         <field name="difficulty" />
+                        <!-- añadir Students -->
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
+
+    <!-- Lista view -->
+    
+
+    <!-- Search view -->
+    <record id="subject_view_search" model="ir.ui.view">
+        <field name="name">subject.view.search</field>
+        <field name="model">learning.subject</field>
+        <field name="arch" type="xml">
+            <search string="">
+                <field name="name" />
+                <field name="price" />
+                <field name="difficulty" />
+                <group string="Group By">
+                    <filter name="group_by_difficulty" string="Difficulty" context="{'group_by':'difficulty'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="subject_action" model="ir.actions.act_window">
+        <field name="name">Subject</field>
+        <field name="res_model">learning.subject</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="subject_view_search"/>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
 </odoo>
