@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="subject_view_list" model="ir.ui.view">
+        <field name="name">subject.view.list</field>
+        <field name="model">learning.subject</field>
+        <field name="arch" type="xml">
+            <form string="Subject">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="price" />
+                        <field name="difficulty" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

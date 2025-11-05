@@ -24,6 +24,7 @@ Modulo para gestionar alumnos
     'data': [
         'security/ir.model.access.csv',
         'views/student_views.xml',
+        'views/subject_views.xml',
         'views/menu_itens.xml'
     ],
     # only loaded in demonstration mode
