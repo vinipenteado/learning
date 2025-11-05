@@ -6,3 +6,9 @@ class course(models.Model):
 
     name = fields.Char(string='Course Name', required=True)
     subject_id = fields.Many2many('learning.subject', string='Subjects')
+    subject_names = fields.Char(string='Subjects', compute='_compute_subject_names')
+
+    @api.depends('subject_id')
+    def _compute_subject_names(self):
+        for rec in self:
+            rec.subject_names = ', '.join(rec.subject_id.mapped('name')) if rec.subject_id else ''

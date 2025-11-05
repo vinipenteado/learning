@@ -22,7 +22,7 @@
         <field name="arch" type="xml">
             <list string="Courses">
                 <field name="name" />
-                <field name="subject_id" />
+                <field name="subject_names" />
             </list>
         </field>
     </record>
