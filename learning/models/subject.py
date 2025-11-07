@@ -13,12 +13,18 @@ class Subject(models.Model):
         ('hard', 'Hard')
     ])
     student_id = fields.Many2many('learning.student', string='Students')
-
+    student_names = fields.Char(string='Students', compute='_compute_student_names')
     # each subject belongs to one course
     course_id = fields.Many2one('learning.course', string='Course')
 
+    # compute student names
+    @api.depends('student_id')
+    def _compute_student_names(self):
+        for rec in self:
+            rec.student_names = ', '.join(rec.student_id.mapped('name')) if rec.student_id else ''
+
+    # prevent reassigning a subject that already belongs to a course
     def write(self, vals):
-        # prevent reassigning a subject that already belongs to a course
         if 'course_id' in vals:
             for rec in self:
                 if rec.course_id and vals.get('course_id') and rec.course_id.id != vals.get('course_id'):
