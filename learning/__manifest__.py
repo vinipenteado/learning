@@ -26,6 +26,7 @@ Modulo para gestionar alumnos
         'views/student_views.xml',
         'views/subject_views.xml',
         'views/course_views.xml',
+        'views/score_views.xml',
         'views/menu_itens.xml'
     ],
     # only loaded in demonstration mode

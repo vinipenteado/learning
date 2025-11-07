@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <menuitem id="menu_edyma_learning_root" name="Cursos" sequence="5"/>
+    <menuitem id="menu_cursos_root" name="Cursos" sequence="5"/>
 
     <menuitem
         id="student_menu"
         name="Students"
         sequence="10"
-        parent="menu_edyma_learning_root"
+        parent="menu_cursos_root"
         action="student_action"
         />
     
@@ -15,7 +15,7 @@
         id="course_menu"
         name="Course"
         sequence="11"
-        parent="menu_edyma_learning_root"
+        parent="menu_cursos_root"
         action="course_action"
         />
 
@@ -23,8 +23,15 @@
         id="subject_menu"
         name="Subject"
         sequence="12"
-        parent="menu_edyma_learning_root"
+        parent="menu_cursos_root"
         action="subject_action"
         />
 
+    <menuitem
+        id="score_menu"
+        name="Score"
+        sequence="13"
+        parent="menu_cursos_root"
+        action="score_action"
+        />
 </odoo>

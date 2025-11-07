@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_learning_student,access_learning_student,model_learning_student,base.group_user,1,1,1,1
 access_learning_subject,access_learning_subject,model_learning_subject,base.group_user,1,1,1,1
 access_learning_course,access_learning_course,model_learning_course,base.group_user,1,1,1,1
+access_learning_score,access_learning_score,model_learning_score,base.group_user,1,1,1,1

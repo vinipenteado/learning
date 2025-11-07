@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="score_view_form" model="ir.ui.view">
+        <field name="name">score.view.form</field>
+        <field name="model">learning.score</field>
+        <field name="arch" type="xml">
+            <form string="Score">
+                <sheet>
+                    <group>
+                        <field name="value" />
+                        <field name="student_id" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="score_view_list" model="ir.ui.view">
+        <field name="name">score.view.list</field>
+        <field name="model">learning.score</field>
+        <field name="arch" type="xml">
+            <list string="Scores">
+                <field name="value" />
+                <field name="student_id" />
+            </list>
+        </field>
+    </record>
+
+    <record id="score_action" model="ir.actions.act_window">
+        <field name="name">Scores</field>
+        <field name="res_model">learning.score</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>
