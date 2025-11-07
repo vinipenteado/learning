@@ -12,18 +12,19 @@
         />
     
     <menuitem
+        id="course_menu"
+        name="Course"
+        sequence="11"
+        parent="menu_edyma_learning_root"
+        action="course_action"
+        />
+
+    <menuitem
         id="subject_menu"
         name="Subject"
-        sequence="09"
+        sequence="12"
         parent="menu_edyma_learning_root"
         action="subject_action"
         />
 
-    <menuitem
-        id="course_menu"
-        name="Course"
-        sequence="08"
-        parent="menu_edyma_learning_root"
-        action="course_action"
-        />
 </odoo>
