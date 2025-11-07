@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <menuitem id="menu_edyma_learning_root" name="Edyma Learning" sequence="5"/>
+    <menuitem id="menu_edyma_learning_root" name="Cursos" sequence="5"/>
 
     <menuitem
         id="student_menu"
