@@ -13,6 +13,7 @@
                         <field name="age" />
                         <field name="birth_date" />
                         <field name="partner_id" />
+                        <field name="average_score" readonly="1"/>
                     </group>
                 </sheet>
             </form>
@@ -30,6 +31,7 @@
                 <field name="age" />
                 <field name="birth_date" optional="show"/>
                 <field name="partner_id" />
+                <field name="average_score" />
             </list>
         </field>
     </record>

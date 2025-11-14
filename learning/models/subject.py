@@ -16,6 +16,8 @@ class Subject(models.Model):
     student_names = fields.Char(string='Students', compute='_compute_student_names')
     # each subject belongs to one course
     course_id = fields.Many2one('learning.course', string='Course')
+    # One2many inverse to show scores for this subject
+    score_ids = fields.One2many('learning.score', 'subject_id', string='Scores')
 
     # compute student names
     @api.depends('student_id')

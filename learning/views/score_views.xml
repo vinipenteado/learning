@@ -8,8 +8,10 @@
             <form string="Score">
                 <sheet>
                     <group>
-                        <field name="value" />
                         <field name="student_id" />
+                        <!-- show only subjects that include the selected student -->
+                        <field name="subject_id" domain="[('student_id','in',[student_id])]" />
+                        <field name="value" />
                     </group>
                 </sheet>
             </form>
@@ -21,8 +23,9 @@
         <field name="model">learning.score</field>
         <field name="arch" type="xml">
             <list string="Scores">
+                <field name="student_id" required="true"/>
+                <field name="subject_id" required="true"/>
                 <field name="value" />
-                <field name="student_id" />
             </list>
         </field>
     </record>
